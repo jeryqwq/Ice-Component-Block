@@ -29,7 +29,7 @@ class App extends Component {
 
 
         <LogoShower  lineColor="rgba(0,255,0,0.2)" width={100} >
-        <h2 style={{color:'white',textAlign:'center'}} className={'test'}>123</h2>
+        <div style={{width:50,height:50,borderRadius:'50%'}}></div>
         </LogoShower>
 
 

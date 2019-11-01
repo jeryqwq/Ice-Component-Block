@@ -60,6 +60,10 @@
         width: 30%;
         vertical-align: middle;
         white-space: nowrap;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: radial-gradient(white, #99ffff 0%, rgba(185, 255, 255, 0) 60%);
+        background-size: 120% 120%;
         transform: rotateX(-112deg) rotateZ(5deg);
         display: inline-block;
     }
