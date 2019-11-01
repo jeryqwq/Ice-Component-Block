@@ -1,0 +1,50 @@
+{
+  "name": "border-style2",
+  "version": "1.0.0",
+  "description": "大屏边框效果",
+  "private": false,
+  "files": [
+    "demo/",
+    "lib/",
+    "build/"
+  ],
+  "main": "lib/index.js",
+  "stylePath": "style.js",
+  "scripts": {
+    "start": "ice-scripts dev",
+    "build": "ice-scripts build",
+    "test": "ice-scripts test",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint --cache --ext .js,.jsx ./"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "react",
+    "component"
+  ],
+  "dependencies": {
+    "prop-types": "^15.5.8"
+  },
+  "devDependencies": {
+    "ice-plugin-component": "^0.1.1",
+    "ice-plugin-moment-locales": "^0.1.0",
+    "ice-plugin-fusion": "^0.1.4",
+    "ice-scripts": "^2.0.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "@ice/spec": "^0.1.1",
+    "eslint": "^6.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "componentConfig": {
+    "name": "BorderStyle2",
+    "title": "边框闪烁变色",
+    "category": "Information"
+  },
+  "homepage": "https://unpkg.com/border-style2@1.0.0/build/index.html"
+}

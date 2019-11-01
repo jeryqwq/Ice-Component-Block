@@ -1,0 +1,98 @@
+.c-wrap-a1sd32a12g{
+    display: inline-block;
+    .circle1{
+        stroke-dasharray: 100,500;
+        transform-origin: 100px 100px;
+        animation: identifier 3s infinite linear;
+    
+    }
+    .circle11{
+        stroke-dasharray: 60,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: 300;
+        animation: identifier 3s infinite linear;
+    
+    }
+    .circle12{
+        stroke-dasharray: 40,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: 200;
+        animation: identifier 3s infinite linear;
+        @keyframes identifier {
+            from{
+                transform: rotate(0)
+            }
+            to{
+                transform: rotate(360deg)
+            }
+        }
+    }
+    .circle2{
+        stroke-dasharray: 60,500;
+        transform-origin: 100px 100px;
+        animation: identifier2 3s infinite linear;
+       
+    }
+    .circle21{
+        stroke-dasharray: 55,500;
+        transform-origin: 100px 100px;
+        animation: identifier2 3s infinite linear;
+     
+    }
+    .circle22{
+        stroke-dasharray: 50,500;
+        transform-origin: 100px 100px;
+        animation: identifier2 3s infinite linear;
+        @keyframes identifier2 {
+            from{
+            transform: rotate(0)
+            }
+            to{
+                transform: rotate(-360deg)
+            }
+        }
+    }
+    .circle23{
+        stroke-dasharray: 55,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: -200px;
+        animation: identifier2 3s infinite linear;
+    }
+    .circle3{
+        stroke-dasharray: 80,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: -100px;
+        animation: identifier 2s infinite linear;
+    }
+    .circle31{
+        stroke-dasharray: 40,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: -200px;
+        animation: identifier 2s infinite linear;
+    
+    }
+    .circle32{
+        stroke-dasharray: 40,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: -60px;
+        animation: identifier 2s infinite linear;
+    }
+    .circle4{
+        stroke-dasharray: 60,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: -100px;
+        animation: identifier2 2s infinite linear;
+    }
+    .circle41{
+        stroke-dasharray: 30,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: -65px;
+        animation: identifier2 2s infinite linear;
+    }
+    .circle42{
+        stroke-dasharray: 30,500;
+        transform-origin: 100px 100px;
+        stroke-dashoffset: -165px;
+        animation: identifier2 2s infinite linear;
+    }
+}
