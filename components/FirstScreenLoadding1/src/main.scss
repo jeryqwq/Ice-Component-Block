@@ -1,0 +1,154 @@
+.body-wrap-asd12a1sd54rqu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: black;
+    text-align: center;
+    svg{
+        transform-style: preserve-3d;
+    }
+    circle{
+        transform-origin: 600px 600px;
+        fill:none;
+    }
+    .step-1-1{
+        stroke-width: 3px;
+        stroke-dasharray:  100% 0 ;
+        stroke-opacity: 0.5;
+        animation:identifier 1s linear infinite  ;
+        animation-iteration-count: 1;
+        @keyframes identifier {
+            from{
+                stroke-dasharray:  0 100%;
+                stroke-opacity: 0.2;
+            }
+            to{
+                stroke-dasharray:  100% 0 ;
+                stroke-opacity: 0.5;
+            }
+        }
+    }
+    .step-1-2{
+        stroke-width: 15;
+        stroke-dasharray:  100% 0 ;
+        stroke-opacity: 0;
+        animation:identifier1 1.5s linear infinite  ;
+        animation-iteration-count: 1;
+        @keyframes identifier1 {
+            0%{
+                stroke-dasharray:  0 100%;
+                stroke-opacity: 0.2;
+                transform: scale(1);
+                stroke-width: 10;
+            }
+            80%{
+                stroke-dasharray:  100% 0 ;
+                stroke-opacity: 1;
+                transform: scale(1);
+            }
+            100%{
+                stroke-dasharray:  100% 0 ;
+                stroke-opacity: 0.2;
+                transform: scale(1.5);
+                stroke-width: 1;
+    
+            }
+        }
+    }
+    .load-text{
+        font-size: 32px;
+        font-family: sans-serif;
+        transform-origin: 600px 600px;
+        transform: rotateX(45deg);
+    }
+    .process-text{
+        font-size: 32px;
+        font-family: sans-serif;
+        transform-origin: 600px 600px;
+        transform: rotateX(45deg);
+    }
+    .step-2-1{
+        stroke-dasharray: 5% 95%;
+        stroke-dashoffset: 0;
+        stroke-opacity: 0.8;
+        animation:identifier4 3s infinite;
+        animation-iteration-count: 1;
+        @keyframes identifier4 {
+            0%{
+                stroke-opacity: 0.2;
+            }
+            100%{
+                stroke-opacity: 0.8;
+            }
+        }
+    }
+    .step-2-2{
+        stroke-dasharray: 8% 95%;
+        stroke-dashoffset: 30%;
+        stroke-opacity: 0.8;
+        animation:identifier4 3s infinite;
+        animation-iteration-count: 1;
+    }
+    .step-2-3{
+        stroke-dasharray: 12% 95%;
+        stroke-dashoffset:  60%;
+        stroke-opacity: 0.8;
+        animation:identifier4 3s infinite;
+        animation-iteration-count: 1;
+    }
+    .step-2{
+        animation:identifier3 3s linear infinite;
+        transform-origin: 600px 600px;
+        animation-iteration-count: 1;
+        @keyframes identifier3 {
+            0%{
+                transform: scale(1) rotate(0);
+            }
+            15%{
+                transform:rotate(-40deg) scale(1.05);
+            }
+            100%{
+                transform:rotate(2400deg) scale(0.95);
+            }
+        }
+    }
+    
+    .step-3-1{
+        stroke-width: 3px;
+        stroke-dasharray:  100% 0;
+        stroke-opacity: 0.5;
+    
+        transform-origin: 600px 600px;
+        &:nth-child(1){
+            transform: scale(0.95) translateZ(100px);
+         
+      
+        }
+        &:nth-child(2){
+            transform: scale(0.95) translateZ(-100px);
+            animation:identifier 2s linear infinite  ;
+            animation-iteration-count: 1;
+        }
+    }
+    .step-3{
+        animation:identifier3 3s linear infinite;
+        transform-origin: 600px 600px;
+        // animation-iteration-count: 1;
+        @keyframes identifier3 {
+            0%{
+                transform: rotate(0);
+            }
+            15%{
+                transform:rotate(-40deg) ;
+            }
+            100%{
+                transform:rotate(2400deg) ;
+            }
+        }
+    }
+    
+    
+}
