@@ -53,6 +53,18 @@
                     }
                 }
             }
+            &:nth-child(4){
+                animation: identifier5  10s infinite linear ;
+                @keyframes identifier5 {
+                    from{
+                        transform: rotateY(135deg) rotate(0);
+                    }
+                    to{
+                        transform: rotateY(495deg) rotate(360deg);
+                    }
+                }
+            }
+            
      
         }
     }

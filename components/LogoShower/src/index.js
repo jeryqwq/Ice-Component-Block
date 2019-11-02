@@ -11,7 +11,7 @@ export default function LogoShow({children,lineColor,width}){
         }
         <div className={'d3container'}>
            {
-             [1,2,3].map((item)=>{
+             [1,2,3,4].map((item)=>{
               return <span className={"item"} style={{borderColor:lineColor}}  key={item}></span>
              })
            }
