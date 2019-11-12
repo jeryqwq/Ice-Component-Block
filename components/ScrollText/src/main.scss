@@ -1,0 +1,7 @@
+.scroll-text-wrap{
+    overflow:hidden;
+    white-space:nowrap;
+    >.text{
+        display:inline-block;
+    }
+}

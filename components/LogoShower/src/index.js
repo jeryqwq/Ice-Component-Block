@@ -15,7 +15,6 @@ export default function LogoShow({children,lineColor,width}){
               return <span className={"item"} style={{borderColor:lineColor}}  key={item}></span>
              })
            }
-
         </div>
     </div>
 }
