@@ -19,7 +19,7 @@ export default function ShowText({title,content,height,lineColor}){
     },[])//空数组直接跳过依赖，渲染仅执行一次
     const getContainerWidth=useCallback((node ) => {//动态计算容器宽度，每次ref发生跳转时将执行callBack，useRef无法通知容器变化
         if (node !== null) {
-            setWidth(node.getBoundingClientRect().width*0.98);
+            setWidth(node.getBoundingClientRect().width*0.98);//留边，避免样式靠边无法显示边框
           }
         },[i])
     useLayoutEffect(()=>{//渲染完成

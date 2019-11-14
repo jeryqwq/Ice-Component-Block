@@ -1,7 +1,7 @@
 {
-  "name": "scroll-text",
+  "name": "slide-text",
   "version": "1.0.0",
-  "description": "intro component",
+  "description": "文字滚动效果",
   "private": false,
   "files": [
     "demo/",
@@ -45,5 +45,6 @@
     "name": "ScrollText",
     "title": "文字滚动",
     "category": "Information"
-  }
+  },
+  "homepage": "https://unpkg.com/scroll-text@1.0.0/build/index.html"
 }
