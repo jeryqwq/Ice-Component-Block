@@ -1,8 +1,8 @@
 {
-  "name": "slide-text",
+  "name": "table-shower",
   "version": "1.0.2",
-  "description": "文字滚动效果",
   "private": false,
+  "description": "表格展示轮播",
   "files": [
     "demo/",
     "lib/",
@@ -42,9 +42,9 @@
     "react": "^16.3.0"
   },
   "componentConfig": {
-    "name": "SlideText",
-    "title": "文字滚动",
-    "category": "Information"
+    "name": "TableShower",
+    "title": "展示大表哥",
+    "category": "Table"
   },
-  "homepage": "https://unpkg.com/slide-text@1.0.2/build/index.html"
+  "homepage": "https://unpkg.com/table-shower@1.0.2/build/index.html"
 }

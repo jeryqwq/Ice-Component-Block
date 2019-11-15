@@ -1,5 +1,9 @@
 # 文字滚动
 
+slide-text
+
+文字滚动效果
+
 ## API参数
 
 | 参数名 | 说明 | 必填 | 类型 | 默认值 | 备注 |
@@ -8,8 +12,6 @@
 | animationTime | 动画执行周期 | N | number | 5000 | 从最开始到文字消失的时间,越大速度越慢 |
 | isOnce | 是否仅执行一次 | N | boolean   | false | 执行一次后文字消失 |
 | styles | 文字样式 | N | object |   styles:{fontWeight:'bold', fontSize:16} | 支持JSX样式 |
-
-
 ````jsx
 import React, { Component, } from 'react';
 import ReactDOM from 'react-dom';
