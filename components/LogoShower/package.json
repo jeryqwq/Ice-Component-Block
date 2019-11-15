@@ -1,7 +1,8 @@
 {
   "name": "logo-shower",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LOGO展示动画",
+  "private": false,
   "files": [
     "demo/",
     "lib/",
@@ -44,5 +45,6 @@
     "name": "LogoShower",
     "title": "LOGO展示",
     "category": "Others"
-  }
+  },
+  "homepage": "https://unpkg.com/logo-shower@1.0.1/build/index.html"
 }
