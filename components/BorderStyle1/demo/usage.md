@@ -3,7 +3,6 @@ title: 大屏展示边框
 order: 1
 ---
 **边框组件用于展示一些内容渲染和文字时的特效，可内嵌图表或者文字等元素。**
-
 ### 参数描述
 
 | 参数 | 描述 | 类型 | 默认值 | 其他|
@@ -25,19 +24,10 @@ import BorderStyle1 from 'border-style1';
 
 class App extends Component {
   render() {
-    const Node=(
-      <div style={{color:'red'}}>这是自定义节点渲染，可放入你的组件或者其他VDom对象</div>
-    )
     return (
       <div style={{background:'black'}}>
         <h2 style={{color:'white'}}>默认状态</h2>
         <BorderStyle1 /> 
-        
-        <h2 style={{color:'white'}}>头部和内容字符串,以及边框颜色</h2>
-        <BorderStyle1 title="这是头部自定义内容"  content="这是自定义内容文字123123啊大苏打撒旦这是自定义内容文字123123啊大苏打撒旦" height={250} lineColor="yellow"/> 
-
-        <h2 style={{color:'white'}}>函数渲染</h2>
-        <BorderStyle1 title={()=>Node}  content={()=>Node}/> 
       </div>
     );
   }
@@ -47,9 +37,5 @@ ReactDOM.render((
   <App />
 ), mountNode);
 ````
-```css 
 
-
-
-```
 

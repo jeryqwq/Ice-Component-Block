@@ -47,10 +47,10 @@ export default function ShowText({title,content,height,lineColor}){
         setPcontent(pContent+val);
     }
     const point=(x,y,r,key)=>{
-        return <circle cx={x} cy={y}   r={r}  className={'point'} key={key} fill={lineColor}></circle>
+        return <circle cx={x} cy={y}   r={r}  className='point' key={key} fill={lineColor}></circle>
     }
     return(
-        <div className={ 'wrap-text-as32d1a3ssd'} style={{height:`${height}px`}} ref={getContainerWidth}>
+        <div className= 'wrap-text-as32d1a3ssd' style={{height:`${height}px`}} ref={getContainerWidth}>
             {
                 typeof title==="function"?React.cloneElement(pTitle,{//为传递的标题最外层无样式添加动画
                     className:`${pTitle.props.className?pTitle.props.className:animatOver?  "ptitlecur": "ptitle"}`

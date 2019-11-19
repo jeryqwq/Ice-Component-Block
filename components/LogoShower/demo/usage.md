@@ -26,13 +26,9 @@ class App extends Component {
     return (
       <div style={{background:'black'}}>
         <LogoShower />
-
-
         <LogoShower  lineColor="rgba(0,255,0,0.2)" width={100} >
         <div style={{width:50,height:50,borderRadius:'50%'}}></div>
         </LogoShower>
-
-
         <LogoShower width={300}  lineColor="rgba(0,0,255,0.5)"/>
       </div>
     );

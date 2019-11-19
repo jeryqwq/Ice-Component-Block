@@ -1,0 +1,31 @@
+.ListPosition {
+  position: relative;
+  > .item {
+    position: absolute;
+    transition: all 1.5s;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    >.value{
+      float: right;
+      margin-top: 10px;
+    }
+    > .process {
+      transform-style: preserve-3d;
+      animation: identifier infinite 5s linear;
+      @keyframes identifier {
+        from {
+          transform: translateX(-20px) rotateY(-10deg) rotateX(0) ;
+        }
+        to {
+          transform: translateX(-20px) rotateY(-10deg) rotateX(360deg);
+        }
+      }
+      > span {
+        display: inline-block;
+        position: absolute;
+        margin-top: 10px;
+      }
+    }
+  }
+}

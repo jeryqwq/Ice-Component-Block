@@ -1,5 +1,5 @@
 ---
-title: Simple Usage
+title: 滚动表格
 order: 1
 ---
 ## API 参数
@@ -84,10 +84,7 @@ class App extends Component {
     return (
       <div>
        <h3>默认状态</h3>
-        <TableShower />
-        <h3>四行 表头红色 自定义data和columns数据，表体绿色文字,奇数行绿色，偶数行白色,动画周期1000ms,序列号背景黑色   </h3>
-        <TableShower tableRows={4}  columns={columns} data={data} theadStyles={{color:'red'}}  tbodyStyles={{color:'green'}} oddRowBackgroundColor='red'  evenRowBackgroundColor="white" animationSpacing={1000} orderNumberStyles={{background:'black'}}  />
-
+        <TableShower data={data} columns ={columns }/>
       </div>
     );
   }
