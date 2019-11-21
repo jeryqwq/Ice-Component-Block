@@ -6,7 +6,9 @@ order: 2
 ## 说明
 * 为每个柱状设置对应的背景色和边框样式，再data数据源的对应项下添加borderStyle和background属性即可。
 * itemSize为30，即左右侧正方形的边长为30，柱子自适应其大小
-````jsx
+
+
+```jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ListPosition from 'list-position';
@@ -76,4 +78,4 @@ class App extends Component {
 ReactDOM.render((
   <App />
 ), mountNode);
-````
+```

@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from 'react'
-import './main.scss'
-import Proptypes from 'prop-types'
+import React, {  useRef, useLayoutEffect } from 'react';
+import './main.scss';
+import Proptypes from 'prop-types';
+
 function randomColor() {
-  return `rgba(${parseInt(Math.random() * 255)},${parseInt(
-    Math.random() * 255
-  )},${parseInt(Math.random() * 255)},${Math.random()})`
+  return `rgba(${parseInt(Math.random() * 255)},${parseInt( Math.random() * 255)},${parseInt(Math.random() * 255)},${Math.random()})`;
 }
 export default function ListPosition({
   data,
@@ -12,35 +11,33 @@ export default function ListPosition({
   valueStyle,
   labelStyle,
   formatLabel,
-  formatValue
+  formatValue,
 }) {
-  const containerWidth = useRef(null)
-  const maxNum = useRef(0)
-  const total = useRef(0)
-  useEffect(() => {
-    total.current = 0
+  const containerWidth = useRef(null);
+  const maxNum = useRef(0);
+  const total = useRef(0);
+  useLayoutEffect(() => {
+    total.current = 0;
     data.forEach(element => {
-      //求出总值
-      total.current += element.value
-      !element.background && (element.background = randomColor())
+      // 求出总值
+      total.current += element.value;
+      !element.background && (element.background = randomColor());
       !element.borderStyle &&
-        (element.borderStyle = `solid 1px ${randomColor()}`)
-    })
+        (element.borderStyle = `solid 1px ${randomColor()}`);
+    });
     data.forEach(element => {
-      //每一项占比和对应占比的宽度
-      element._percentage = element.value / total.current
+      // 每一项占比和对应占比的宽度
+      element._percentage = element.value / total.current;
       element._width =
-        containerWidth.current.clientWidth * element._percentage - 50
-    })
-    data = data.sort((a, b) => a.value < b.value) //排序
-    maxNum.current = data[data.length - 1] //得到最大值
+        containerWidth.current.clientWidth * element._percentage - 50;
+    });
+    data = data.sort((a, b) => a.value < b.value); // 排序
+    maxNum.current = data[data.length - 1]; // 得到最大值
     data.forEach(element => {
-      //渲染对应宽度时会显得单个图表太窄了，以最大项为为单位向外扩充
-        element._factWidth =
-          (1 - data[0]._percentage) * containerWidth.current.clientWidth +
-          element._width
-    })
-  })
+      // 渲染对应宽度时会显得单个图表太窄了，以最大项为为单位向外扩充
+        element._factWidth = (1 - data[0]._percentage) * containerWidth.current.clientWidth +element._width;
+    });
+  });
   return (
     <div
       className="ListPosition"
@@ -67,10 +64,9 @@ export default function ListPosition({
                 height: itemSize,
                 background: item.background,
                 border: item.borderStyle,
-                transform: ` translateX(${item._factWidth -
-                  itemSize / 2}px) rotateY(90deg)`
+                transform: ` translateX(${item._factWidth -itemSize / 2}px) rotateY(90deg)`,
               }}
-            ></span>
+             />
             <span
               className="right"
               style={{
@@ -78,9 +74,9 @@ export default function ListPosition({
                 height: itemSize,
                 background: item.background,
                 border: item.borderStyle,
-                transform: `translateX(-${itemSize / 2}px) rotateY(-90deg)`
+                transform: `translateX(-${itemSize / 2}px) rotateY(-90deg)`,
               }}
-            ></span>
+             />
             <span
               className="top"
               style={{
@@ -88,9 +84,9 @@ export default function ListPosition({
                 background: item.background,
                 border: item.borderStyle,
                 width: `${item._factWidth}px`,
-                transform: ` translateY(-${itemSize / 2}px) rotateX(90deg)`
+                transform: ` translateY(-${itemSize / 2}px) rotateX(90deg)`,
               }}
-            ></span>
+             />
             <span
               className="bottom"
               style={{
@@ -98,9 +94,9 @@ export default function ListPosition({
                 width: `${item._factWidth}px`,
                 background: item.background,
                 border: item.borderStyle,
-                transform: `translateY(${itemSize / 2}px) rotateX(-90deg)`
+                transform: `translateY(${itemSize / 2}px) rotateX(-90deg)`,
               }}
-            ></span>
+             />
             <span
               className="frond"
               style={{
@@ -108,9 +104,9 @@ export default function ListPosition({
                 height: itemSize,
                 background: item.background,
                 border: item.borderStyle,
-                transform: `translateZ(${itemSize / 2}px)`
+                transform: `translateZ(${itemSize / 2}px)`,
               }}
-            ></span>
+             />
             <span
               className="back"
               style={{
@@ -118,9 +114,9 @@ export default function ListPosition({
                 height: itemSize,
                 background: item.background,
                 border: item.borderStyle,
-                transform: `translateZ(-${itemSize / 2}px)`
+                transform: `translateZ(-${itemSize / 2}px)`,
               }}
-            ></span>
+             />
           </div>
           <span className="value" style={{ ...valueStyle }}>
             {formatValue?formatValue(item):item.value}
@@ -128,7 +124,7 @@ export default function ListPosition({
         </div>
       ))}
     </div>
-  )
+  );
 }
 ListPosition.propTypes = {
   data: Proptypes.array,
@@ -136,9 +132,11 @@ ListPosition.propTypes = {
   valueStyle: Proptypes.object,
   labelStyle: Proptypes.object,
   formatLabel: Proptypes.func,
-  formatValue: Proptypes.func
-}
+  formatValue: Proptypes.func,
+};
 ListPosition.defaultProps = {
+  formatLabel:undefined,
+  formatValue:undefined,
   itemSize: 20,
   valueStyle: {},
   labelStyle: {},
@@ -146,27 +144,27 @@ ListPosition.defaultProps = {
     {
       label: '2012年人均GDP',
       value: 50,
-      borderStyle: 'none'
+      borderStyle: 'none',
     },
     {
       label: '2015年人均GDP',
       value: 80,
-      borderStyle: 'none'
+      borderStyle: 'none',
     },
     {
       label: '2017年人均GDP',
       value: 80,
-      borderStyle: 'none'
+      borderStyle: 'none',
     },
     {
       label: '2018年人均GDP',
       value: 100,
-      borderStyle: 'none'
+      borderStyle: 'none',
     },
     {
       label: '2019年人均GDP',
       value: 95,
-      borderStyle: 'none'
-    }
-  ]
-}
+      borderStyle: 'none',
+    },
+  ],
+};

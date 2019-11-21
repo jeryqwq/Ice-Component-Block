@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useRef,useLayoutEffect} from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import  './main.scss';
+
 export default function ScrollText({text,isOnce,animationTime,styles}) {
   const [left,setLeft]=useState(0);
   const textNode=useRef(null);
@@ -14,40 +15,40 @@ export default function ScrollText({text,isOnce,animationTime,styles}) {
               isOnePass=true;
               return width.current.containerWidth;
           }
-          if(isOnce&&isOnePass){//仅执行一次且一次已经过去
+          if(isOnce&&isOnePass){// 仅执行一次且一次已经过去
             clearInterval(interval);
             setLeft(0);
           }
             return val-1;
-      })
+      });
     }, animationTime/width.current.textWidth);
     return interval;
-  }
+  };
 
-  useLayoutEffect(()=>{//渲染完成重新计算宽度，自适应
+  useLayoutEffect(()=>{// 渲染完成重新计算宽度，自适应
     width.current={
       textWidth:textNode.current.offsetWidth,
-      containerWidth:containerNode.current.parentNode.offsetWidth
-    }
-  })
+      containerWidth:containerNode.current.parentNode.offsetWidth,
+    };
+  });
   useEffect(() => {
     const interval=move();
     return () => {
       interval&&clearInterval(interval);
     };
-  }, [])
+  }, [move]);
   return (
     <div className="scroll-text-wrap" ref={containerNode}>
-      <span ref={textNode} className={'text'} style={{transform:`translateX(${left}px)`,...styles}}>{text}</span>
+      <span ref={textNode} className="text" style={{transform:`translateX(${left}px)`,...styles}}>{text}</span>
     </div>
   );
 }
 
 ScrollText.propTypes = {
-  text:propTypes.string,
-  animationTime:propTypes.number,
-  isOnce:propTypes.bool,
-  styles:propTypes.object
+  text:PropTypes.string,
+  animationTime:PropTypes.number,
+  isOnce:PropTypes.bool,
+  styles:PropTypes.object,
 };
 
 ScrollText.defaultProps = {
@@ -57,5 +58,5 @@ ScrollText.defaultProps = {
   styles:{
     fontWeight:'bold',
     fontSize:16,
-  }
+  },
 };

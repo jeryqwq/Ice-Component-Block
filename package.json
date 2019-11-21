@@ -1,26 +1,50 @@
 {
   "name": "material-iceworks",
   "version": "0.1.1",
-  "description": "This is a ice material project",
+  "description": "This is a ice material project and  use storybook to build doc web",
   "author": "",
   "scripts": {
+    "doc": "start-storybook -p 6006",
     "deploy": "npm run generate && npm run sync",
     "generate": "iceworks generate",
     "sync": "iceworks sync",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx ./",
-    "stylelint": "stylelint ./**/*.scss"
+    "stylelint": "stylelint ./**/*.scss",
+    "build-doc": "build-storybook"
   },
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "devDependencies": {
+    "@babel/core": "^7.7.2",
     "@ice/spec": "^0.1.1",
+    "@storybook/addon-notes": "^5.2.6",
+    "@storybook/addon-storysource": "^5.2.6",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-info": "^5.2.6",
+    "@storybook/addon-knobs": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
+    "@storybook/react": "^5.2.6",
+    "storybook-addon-react-live-edit": "^2.0.4",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.0.1",
-    "stylelint": "^10.1.0"
+    "stylelint": "^10.1.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
   },
   "materialConfig": {
     "template": "@icedesign/ice-react-material-template",
     "type": "react",
     "registry": "http://192.168.4.145:8001",
     "unpkgHost": "http://192.168.4.145:8001"
+  },
+  "dependencies": {
+    "list-position": "^1.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "table-shower": "^1.0.2"
   }
 }

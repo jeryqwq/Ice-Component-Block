@@ -2,6 +2,7 @@
 title: 动态排名组件
 order: 1
 ---
+
 ## API 参数
 
 | 参数名 | 说明 | 必填 | 类型 | 默认值 | 备注 |
@@ -29,14 +30,13 @@ class App extends Component {
      data: [{
       label: '2012年人均GDP',
       value: 0,
-      borderStyle:'none'
-
+      borderStyle:'none',//设置单项的边框样式
+      // background:'' 单独设置单项的背景色
     },
     {
       label: '2015年人均GDP',
       value: 80,
       borderStyle:'none'
-
     },
     {
       label: '2016年人均GDP',
@@ -65,7 +65,7 @@ class App extends Component {
   componentDidMount(){
      let data=[]
       setInterval(()=>{
-      this.state.data.forEach((item,idx)=>{
+      this.state.data.forEach((item,idx)=>{//增加随机动画
         const val=parseInt(Math.random()*5);
         item.value+=val
         // val%2===0?item.value+=val:item.value-=val;

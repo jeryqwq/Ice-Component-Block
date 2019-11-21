@@ -4,7 +4,14 @@ order: 3
 ---
 
 ## 说明
-  当label或者value的内容超出或者想自定义根据原来的值显示其他的属性时，可传入foramt处理函数,改函数回调当前项的值如：{name:'',value:''}
+
+* 当label或者value的内容超出或者想自定义根据原来的值显示其他的属性时，可传入foramt处理函数,改函数回调当前项的值如：{name:'',value:''}
+该函数可返回格式化后的数据或者自定义jsx。
+
+* formatLabel={(item)=><span>span标签内包的{item.label}</span>} 
+* formatValue={(item)=>item.value+"万"} 
+
+### 示例
 
 ````jsx
 import React, { Component } from 'react';
@@ -67,7 +74,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <ListPosition  data={this.state.data}  formatLabel={(item)=><span>{item.label+".."}</span>}  formatValue={(item)=>item.value+".."} />
+        <ListPosition  data={this.state.data}  formatLabel={(item)=><span>span标签内包的{item.label}</span>}  formatValue={(item)=>item.value+"万"} />
       </div>
     );
   }

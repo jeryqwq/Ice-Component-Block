@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
-import './main.scss'
+import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
+import './main.scss';
+
 export default function TableShower({
   tableRows,
   isBanner,
@@ -12,55 +13,55 @@ export default function TableShower({
   orderNumberStyles,
   columns,
   data,
-  isLoop
+  isLoop,
 }) {
-  const itemTr = useRef(null)
-  const [height, setHeight] = useState(0)
-  const [curIdx, setCurIdx] = useState(0)
-  const [isAni, setIsAni] = useState(true)
-  theadStyles = { ...TableShower.defaultProps.theadStyles, ...theadStyles }
-  tbodyStyles = { ...TableShower.defaultProps.tbodyStyles, ...tbodyStyles }
+  const itemTr = useRef(null);
+  const [height, setHeight] = useState(0);
+  const [curIdx, setCurIdx] = useState(0);
+  const [isAni, setIsAni] = useState(true);
+  theadStyles = { ...TableShower.defaultProps.theadStyles, ...theadStyles };
+  tbodyStyles = { ...TableShower.defaultProps.tbodyStyles, ...tbodyStyles };
   orderNumberStyles = {
     ...TableShower.defaultProps.orderNumberStyles,
-    ...orderNumberStyles
-  }
+    ...orderNumberStyles,
+  };
   useEffect(() => {
-    let itemHeight = itemTr.current.clientHeight
-    let wrapHeight = itemHeight * tableRows
-    setHeight(wrapHeight)
-    let interval
+    const itemHeight = itemTr.current.clientHeight;
+    const wrapHeight = itemHeight * tableRows;
+    setHeight(wrapHeight);
+    let interval;
     if (isBanner && data.length >= tableRows) {
       setInterval(() => {
         setCurIdx(val => {
           if (val >= data.length) {
-            setIsAni(false)
-            !isLoop && clearInterval(interval)
-            return 0
+            setIsAni(false);
+            !isLoop && clearInterval(interval);
+            return 0;
           } else {
-            setIsAni(true)
-            return val + 1
+            setIsAni(true);
+            return val + 1;
           }
-        })
-      }, animationSpacing)
+        });
+      }, animationSpacing);
     }
     return () => {
-      clearInterval(interval)
-    }
-  }, [data,columns])
+      clearInterval(interval);
+    };
+  }, [data, columns, tableRows, isBanner, animationSpacing, isLoop]);
   const transformStyle = function() {
     return `translateY(-${(itemTr.current ? itemTr.current.clientHeight : 0) *
-      curIdx}px)`
-  }
+      curIdx}px)`;
+  };
   const TableElItem = data.map((item1, idx1) => (
     <tr
       style={{
         background:
-          idx1 % 2 === 0 ? oddRowBackgroundColor : evenRowBackgroundColor
+          idx1 % 2 === 0 ? oddRowBackgroundColor : evenRowBackgroundColor,
       }}
       key={idx1}
       ref={itemTr}
     >
-      <td width="40" className={'order-num'}>
+      <td width="40" className="order-num">
         <span style={{ ...orderNumberStyles }}>{idx1 + 1}</span>
       </td>
       {columns.map((item2, idx2) => (
@@ -69,19 +70,19 @@ export default function TableShower({
           style={{ ...tbodyStyles }}
           key={idx2}
         >
-          {typeof item1[columns[idx2]['key']] === 'function'
-            ? item1[columns[idx2]['key']](item1)
-            : item1[columns[idx2]['key']]}
+          {typeof item1[columns[idx2].key] === 'function'
+            ? item1[columns[idx2].key](item1)
+            : item1[columns[idx2].key]}
         </td>
       ))}
     </tr>
-  ))
+  ));
   return (
     <div className="TableShower-as2da2sf45as">
       <table>
         <thead>
           <tr style={{ ...theadStyles }}>
-            <td width="40"></td>
+            <td width="40" />
             {columns.map((item, idx) => (
               <td width={item.width ? item.width : '50'} key={idx}>
                 {item.title}
@@ -90,7 +91,7 @@ export default function TableShower({
           </tr>
         </thead>
       </table>
-      <div className={'scroll-tab'} style={{ height }}>
+      <div className="scroll-tab" style={{ height }}>
         <table
           style={{ transform: transformStyle() }}
           className={`${isAni ? 'ani' : ''}`}
@@ -102,7 +103,7 @@ export default function TableShower({
         </table>
       </div>
     </div>
-  )
+  );
 }
 
 TableShower.propTypes = {
@@ -116,8 +117,8 @@ TableShower.propTypes = {
   orderNumberStyles: PropTypes.object,
   columns: PropTypes.array,
   data: PropTypes.array,
-  isLoop: PropTypes.bool
-}
+  isLoop: PropTypes.bool,
+};
 const dataItem = function(idx) {
   return {
     data1: `第${idx}行1`,
@@ -125,10 +126,10 @@ const dataItem = function(idx) {
     data3: `第${idx}行3`,
     data4: `第${idx}行4`,
     data5: item => {
-      return <span>{item.data1}"自定义函数渲染"</span>
-    }
-  }
-}
+      return <span>{item.data1}"自定义函数渲染"</span>;
+    },
+  };
+};
 TableShower.defaultProps = {
   tableRows: 8,
   isBanner: true,
@@ -137,12 +138,12 @@ TableShower.defaultProps = {
   theadStyles: {
     background: '#00baff',
     lineHeight: '50px',
-    color: 'white'
+    color: 'white',
   },
   tbodyStyles: {
     height: 45,
     color: 'white',
-    fontSize: 12
+    fontSize: 12,
   },
   oddRowBackgroundColor: '#003b51',
   evenRowBackgroundColor: '#0a2732',
@@ -153,35 +154,35 @@ TableShower.defaultProps = {
     lineHeight: '30px',
     background: '#00baff',
     borderRadius: '50%',
-    color: 'white'
+    color: 'white',
   },
   columns: [
     {
       title: '表头1',
-      key: 'data1'
+      key: 'data1',
     },
     {
       title: '表头2',
-      key: 'data2'
+      key: 'data2',
     },
     {
       title: '表头3',
-      key: 'data3'
+      key: 'data3',
     },
     {
       title: '表头4',
-      key: 'data4'
+      key: 'data4',
     },
     {
       title: '表头5',
-      key: 'data5'
-    }
+      key: 'data5',
+    },
   ],
   data: (function() {
-    let arr = []
+    const arr = [];
     for (let index = 0; index < 20; index++) {
-      arr.push(dataItem(index + 1))
+      arr.push(dataItem(index + 1));
     }
-    return arr
-  })()
-}
+    return arr;
+  })(),
+};

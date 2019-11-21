@@ -1,6 +1,6 @@
 {
   "name": "list-position",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "动态排名组件",
   "files": [
     "demo/",
@@ -45,5 +45,5 @@
     "title": "动态排名",
     "category": "Chart"
   },
-  "homepage": "https://unpkg.com/list-position@1.0.0/build/index.html"
+  "homepage": "https://unpkg.com/list-position@1.0.1/build/index.html"
 }
