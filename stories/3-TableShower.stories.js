@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import TableShower from 'table-shower';
+import TableShower from './../components/TableShower/src/index';
 import {withLiveEditScope} from 'storybook-addon-react-live-edit';
 import { withKnobs, number,array,object,button, boolean,color } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';

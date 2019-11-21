@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import {withLiveEditScope} from 'storybook-addon-react-live-edit';
 import { withKnobs, number,array,object,button } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
-import ListPosition from 'list-position';
+import ListPosition from './../components/ListPosition/src/index';
 import usage from '../components/ListPosition/demo/usage.md';
 import dmeo2 from '../components/ListPosition/demo/demo2.md';
 import demo3  from '../components/ListPosition/demo/demo4.md';

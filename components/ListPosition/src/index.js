@@ -1,4 +1,4 @@
-import React, {  useRef, useLayoutEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './main.scss';
 import Proptypes from 'prop-types';
 
@@ -13,38 +13,44 @@ export default function ListPosition({
   formatLabel,
   formatValue,
 }) {
+  const [clearData,setclearData]=useState(()=>[])
   const containerWidth = useRef(null);
   const maxNum = useRef(0);
   const total = useRef(0);
-  useLayoutEffect(() => {
+  useEffect(() => {
+    let privateData=new Array(...data);
     total.current = 0;
-    data.forEach(element => {
+    privateData.forEach(element => {
       // 求出总值
       total.current += element.value;
       !element.background && (element.background = randomColor());
       !element.borderStyle &&
         (element.borderStyle = `solid 1px ${randomColor()}`);
     });
-    data.forEach(element => {
+    privateData.forEach(element => {
       // 每一项占比和对应占比的宽度
       element._percentage = element.value / total.current;
       element._width =
         containerWidth.current.clientWidth * element._percentage - 50;
     });
-    data = data.sort((a, b) => a.value < b.value); // 排序
-    maxNum.current = data[data.length - 1]; // 得到最大值
-    data.forEach(element => {
+    privateData = privateData.sort((a, b) => b.value- a.value ); // 排序
+    maxNum.current = privateData[data.length - 1]; // 得到最大值
+    privateData.forEach(element => {
       // 渲染对应宽度时会显得单个图表太窄了，以最大项为为单位向外扩充
-        element._factWidth = (1 - data[0]._percentage) * containerWidth.current.clientWidth +element._width;
+        element._factWidth = (1 - privateData[0]._percentage) * containerWidth.current.clientWidth +element._width;
     });
-  });
+    setclearData(privateData);
+    return()=>{
+
+    }
+  },[]);
   return (
     <div
       className="ListPosition"
       ref={containerWidth}
       style={{ height: itemSize * 3 * data.length }}
     >
-      {data.map((item, idx) => (
+      {clearData.map((item, idx) => (
         <div
           className="item"
           key={item.label}
