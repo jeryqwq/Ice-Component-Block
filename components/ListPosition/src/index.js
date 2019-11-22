@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef,useEffect, useLayoutEffect } from 'react';
 import './main.scss';
 import Proptypes from 'prop-types';
+import {  } from '@storybook/addons';
 
 function randomColor() {
   return `rgba(${parseInt(Math.random() * 255)},${parseInt( Math.random() * 255)},${parseInt(Math.random() * 255)},${Math.random()})`;
@@ -13,25 +14,21 @@ export default function ListPosition({
   formatLabel,
   formatValue,
 }) {
-  const [clearData,setclearData]=useState(()=>[])
+  const [clearData,setclearData]=useState(()=>[]);
   const containerWidth = useRef(null);
   const maxNum = useRef(0);
-  const total = useRef(0);
-  useEffect(() => {
+  const [total,setTotal] = useState(0);
+  useEffect(()=>{
     let privateData=new Array(...data);
-    total.current = 0;
     privateData.forEach(element => {
       // 求出总值
-      total.current += element.value;
       !element.background && (element.background = randomColor());
-      !element.borderStyle &&
-        (element.borderStyle = `solid 1px ${randomColor()}`);
+      !element.borderStyle && (element.borderStyle = `solid 1px ${randomColor()}`);
     });
     privateData.forEach(element => {
       // 每一项占比和对应占比的宽度
-      element._percentage = element.value / total.current;
-      element._width =
-        containerWidth.current.clientWidth * element._percentage - 50;
+      element._percentage = element.value / total;
+      element._width =containerWidth.current.clientWidth * element._percentage - 50;
     });
     privateData = privateData.sort((a, b) => b.value- a.value ); // 排序
     maxNum.current = privateData[data.length - 1]; // 得到最大值
@@ -40,10 +37,15 @@ export default function ListPosition({
         element._factWidth = (1 - privateData[0]._percentage) * containerWidth.current.clientWidth +element._width;
     });
     setclearData(privateData);
-    return()=>{
-
-    }
-  },[]);
+  },[total]);
+  //试图刷新后重新计算排名状态
+  useLayoutEffect(()=>{
+    let priTotal=0;
+    data.forEach((item)=>{
+      priTotal+=item.value;
+    });
+    setTotal(priTotal);
+  });
   return (
     <div
       className="ListPosition"

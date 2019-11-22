@@ -12,12 +12,11 @@ module.exports = async ({ config, mode }) => {
     use: ['style-loader', 'css-loader', 'sass-loader'],//添加sass解析
     include: path.resolve(__dirname, '../'),
   });
-  // config.module.rules.push({
-  //   test: /\.stories\.jsx?$/,
-  //   loaders: [require.resolve('@storybook/addon-storysource/loader')],//配置源码显示，注册loader
-  //   enforce: 'pre',
-  // });
-
+  config.module.rules.push({
+    test: /\.stories\.jsx?$/,
+    loaders: [require.resolve('@storybook/source-loader')],//转换storebook文件为AST。展示故事源码
+    enforce: 'pre',
+  }); 
   console.log(config.module.rules)
   // Return the altered config
   return config;

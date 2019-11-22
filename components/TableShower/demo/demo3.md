@@ -4,7 +4,9 @@ order: 3
 ---
 
 ## 说明
+
 当需要自定义渲染元素时,对应的key值传递一个返回需要显示的组件或者节点函数，该函数默认回调一个当前项的对象。
+
 ## 示例
 ````jsx
 import React, { Component } from 'react';

@@ -19,6 +19,7 @@ export default function TableShower({
   const [height, setHeight] = useState(0);
   const [curIdx, setCurIdx] = useState(0);
   const [isAni, setIsAni] = useState(true);
+  const interval=useRef(null);
   theadStyles = { ...TableShower.defaultProps.theadStyles, ...theadStyles };
   tbodyStyles = { ...TableShower.defaultProps.tbodyStyles, ...tbodyStyles };
   orderNumberStyles = {
@@ -26,16 +27,16 @@ export default function TableShower({
     ...orderNumberStyles,
   };
   useEffect(() => {
+    interval.current&&clearInterval( interval.current);
     const itemHeight = itemTr.current.clientHeight;
     const wrapHeight = itemHeight * tableRows;
     setHeight(wrapHeight);
-    let interval;
     if (isBanner && data.length >= tableRows) {
-      setInterval(() => {
+      interval.current=setInterval(() => {
         setCurIdx(val => {
           if (val >= data.length) {
             setIsAni(false);
-            !isLoop && clearInterval(interval);
+            !isLoop && clearInterval( interval.current);
             return 0;
           } else {
             setIsAni(true);
@@ -45,7 +46,7 @@ export default function TableShower({
       }, animationSpacing);
     }
     return () => {
-      clearInterval(interval);
+      interval.current&&clearInterval( interval.current);
     };
   }, [data, columns, tableRows, isBanner, animationSpacing, isLoop]);
   const transformStyle = function() {
@@ -126,7 +127,7 @@ const dataItem = function(idx) {
     data3: `第${idx}行3`,
     data4: `第${idx}行4`,
     data5: item => {
-      return <span>{item.data1}"自定义函数渲染"</span>;
+      return <span>{item.data1}自定义函数渲染</span>;
     },
   };
 };
