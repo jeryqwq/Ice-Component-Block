@@ -1,6 +1,15 @@
 import { configure,addParameters ,setAddon } from '@storybook/react';
 import { create } from '@storybook/theming/create';
 import LiveEdit, {setOptions} from 'storybook-addon-react-live-edit';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+
+  addParameters({
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
+});
+
 setOptions({ theme: 'darcula', presets: ['react'] });
 setAddon(LiveEdit);
 const myThemes= create({
@@ -44,8 +53,6 @@ addParameters({
     theme:myThemes,
   },
 });
-// addDecorator(withInfo); // 自动生成props文档
-
 // const loaderFn=()=>([//配置手动引入
 //   require("./../components/ListPosition/lib/index")
 // ])

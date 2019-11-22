@@ -15,8 +15,8 @@ order: 1
 | formatValue | value处理函数，可返回节点或者字符串 | N | func | null |  该函数回调当前item对象，请返回您处理后的结果 |
 
 ## 说明
-* data对象支持数据源配置，可传入圆柱体的边框色和圆柱体每个面的背景色，请传入background属性，否则默认随机颜色和随机边框色以及透明度。
-* 每次value改变时data的label属性必须保证其唯一性，否则无法触发动画执行
+* `data对象支持数据源配置，可传入圆柱体的边框色和圆柱体每个面的背景色，请传入background属性，否则默认随机颜色和随机边框色以及透明度。`
+* `每次value改变时data的label属性必须保证其唯一性，否则无法触发动画执行`
 
 ````jsx
 import React, { Component } from 'react';

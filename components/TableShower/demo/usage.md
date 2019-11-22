@@ -1,20 +1,21 @@
 ---
 title: 滚动表格
 order: 1
----
+--- 
+
 ## API 参数
 
 | 参数名 | 说明 | 必填 | 类型 | 默认值 | 备注 |
-| ------ | ---- | ---- | ---- | ------ | ---- |
+| ---- | -- | -- | ---- | - | ---------------------- |
 |     tableRows   |    表格的行数  |   N   |   number   |   8     |      |
 | isBanner  | 是否开启滑动 | N | bool | true |  |
 | animationSpacing | 滑动动画每次执行的间隔 | N | number | 2000 | 单位毫秒 |
 | isLoop | 是否开启无脑循坏 | N | bool | true | 为false时动画执行一次后停止 |
-| theadStyles  | 头部的tr标签JSX样式  | N  | object | {background:'#00baff',lineHeight:'50px',color:'white'}  | 默认合并，冲突优先选择用户传入的 |
+| theadStyles  | 头部的tr标签JSX样式  | N  | object | {background:'#00baff', lineHeight:'50px' ,color:'white' }  | 默认合并，冲突优先选择用户传入的 |
 | tbodyStyles | body标签的JSX样式 | N  | object | {height:45,color:'white',fontSize:12 } | 默认合并样式，冲突优先选择用户传入的 |
 | oddRowBackgroundColor | 奇数行的背景 | N | string  | '#003b51' | css颜色 |
 | evenRowBackgroundColor | 偶数行的背景 | N | string  | '#0a2732' | css颜色 |
-| orderNumberStyles | 自定义序列号样式 | N |  object | {display: 'inline-block',width: 30,height: 30,lineHeight:"30px",background: '#00baff',borderRadius:'50%',color:'white'} | 默认合并，冲突优先选择用户传入的 | 
+| orderNumberStyles | 自定义序列号样式 | N |  object | {display: 'inline-block', width: 30,height: 30,lineHeight:"30px", background: '#00baff',  borderRadius:'50%', color:'white'} | 默认合并，冲突优先选择用户传入的 | 
 | columns | 表头信息,widht:表格的宽度,key:表体对应的key值,title:表头名字 |  Y | array | [{title: '表头1',width: "20%",key: 'data1',}] |  |
 | data | 表体内的数据  | Y | array | [{data1:'',data2:'',...},...]  | 数据需要与表头信息的key对应，否则找不到渲染对象 |
 

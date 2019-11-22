@@ -8,6 +8,7 @@ import usage from "../components/TableShower/demo/usage.md";
 import demo3 from  "../components/TableShower/demo/demo3.md";
 import demo2 from "../components/TableShower/demo/demo2.md";
 const stories = storiesOf('表格展示组件', module);
+stories.addParameters({ component: TableShower });
 stories.addDecorator(withInfo); 
 stories.addDecorator(withKnobs);
 stories.addDecorator(withLiveEditScope({ React, TableShower }));
@@ -94,6 +95,7 @@ stories.add("自定义单元格样式",()=>{
       key1: `第${idx}行1文字有点长啊实打实的发是发撒肯定就爱上了觉得`,
       key2:  `第${idx}行2`,
       key3: `第${idx}行3`,
+      key4: `第${idx}行4`,
     };
 };
 const data = (function(){
