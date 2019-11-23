@@ -1,15 +1,21 @@
-import { configure,addParameters ,setAddon } from '@storybook/react';
+import { configure,addParameters ,setAddon ,addDecorator} from '@storybook/react';
 import { create } from '@storybook/theming/create';
 import LiveEdit, {setOptions} from 'storybook-addon-react-live-edit';
+import { withInfo } from '@storybook/addon-info';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
-  addParameters({
+addParameters({
   docs: {
     container: DocsContainer,
     page: DocsPage,
   },
 });
-
+addDecorator(
+  withInfo({
+    header: false, // Global configuration for the info addon across all of your stories.
+    inline:true,
+  })
+);
 setOptions({ theme: 'darcula', presets: ['react'] });
 setAddon(LiveEdit);
 const myThemes= create({

@@ -2,14 +2,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {withLiveEditScope} from 'storybook-addon-react-live-edit';
 import { withKnobs, number,array,object,button } from '@storybook/addon-knobs';
-import { withInfo } from '@storybook/addon-info';
 import ListPosition from '../components/ListPosition/src/index';
 import usage from '../components/ListPosition/demo/usage.md';
 import dmeo2 from '../components/ListPosition/demo/demo2.md';
 import demo3  from '../components/ListPosition/demo/demo4.md';
-
+import {genSetupMarkdown} from './util';
 const stories = storiesOf('动态排名组件', module);
-stories.addDecorator(withInfo); 
 stories.addDecorator(withKnobs);
 stories.addDecorator(withLiveEditScope({ React, ListPosition }));
 stories.add('基础配置', () => {
@@ -55,7 +53,9 @@ button("随机增加,触发动画",()=>{
 data={array("数据源配置",data)}
  /></div>);
 },{
-  notes:{markdown:usage},
+  notes:{
+    "安装":genSetupMarkdown("ListPosition"),
+    "相关文档":usage},
 }).add("自定义单项样式",()=>{
   
   const data= [{
@@ -108,7 +108,8 @@ button("随机增加,触发动画",()=>{
   data={array("数据源配置",data)}
   /></div>;
 },{
-  notes:{markdown:dmeo2},
+  notes:{ "安装":genSetupMarkdown("ListPosition"),
+  "相关文档":dmeo2},
 }).add("自定义渲染label和value",()=>{
  const  data= [{
     label: '2012年人均GDP',
@@ -162,6 +163,7 @@ button("随机增加,触发动画",()=>{
  formatLabel={(item)=><span>{`span标签内包的${item.label}`}</span>}  formatValue={(item)=>`${item.value}万`} /></div>;
 },{
   notes:{
-    markdown:demo3,
+    "安装":genSetupMarkdown("ListPosition"),
+    "相关文档":demo3,
   },
-}).addLiveSource('在线调试', `return <ListPosition  labelStyle={{color:'red'}} formatValue={(item)=>item.value+"..."}/>`);
+}).addLiveSource('在线调试', `return <ListPosition  labelStyle={{color:'red'}} formatValue={(item)=>item.value+"..."}  />`);

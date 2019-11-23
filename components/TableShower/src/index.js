@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import './main.scss';
 
+/** 表格数据展示组件*/
 export default function TableShower({
   tableRows,
   isBanner,
@@ -108,16 +109,27 @@ export default function TableShower({
 }
 
 TableShower.propTypes = {
+    /**  表格的行数 */
   tableRows: PropTypes.number,
+  /** 是否开启滑动 */
   isBanner: PropTypes.bool,
+  /** 头部的tr标签JSX样式 */
   theadStyles: PropTypes.object,
+  /** body标签的JSX样式 */
   tbodyStyles: PropTypes.object,
+  /** 滑动动画每次执行的间隔 */
   animationSpacing: PropTypes.number,
+  /** 奇数行的背景 */
   oddRowBackgroundColor: PropTypes.string,
+  /** 偶数行的背景 */
   evenRowBackgroundColor: PropTypes.string,
+  /** 自定义序列号样式 */
   orderNumberStyles: PropTypes.object,
+  /**  表头信息,widht:表格的宽度,key:表体对应的key值,title:表头名字 */
   columns: PropTypes.array,
+  /** 表体内的数据,映射表头信息展示 */
   data: PropTypes.array,
+  /** 是否开启无脑循坏 */
   isLoop: PropTypes.bool,
 };
 const dataItem = function(idx) {
