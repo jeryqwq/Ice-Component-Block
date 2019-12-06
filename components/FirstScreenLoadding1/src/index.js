@@ -7,10 +7,11 @@ export default function Loadding({lineColor,isOnlyLoadding}){
     const [i,setI]=useState(0);
     const [isAnimatonOver,setIAnimatonOver]=useState(false);
     const stepInfos=useRef(null);
-    const timeStracks=useRef(null);//动画延时器存储，组件销毁时移除,防止内存溢出
+    const timeStracks=useRef(null);//动画延时器存储，组件销毁时移除
     let interval;
     isDieout[0]=true;//第一次渲染时外圈为true，避免在第二次渲染才出现，有一个时间差，优化体验,
     useEffect(() => {
+        setIAnimatonOver(false);
         const loadArr="LOADING.....".split('');
         let pi=0;
         timeStracks.current=[];
@@ -51,7 +52,7 @@ export default function Loadding({lineColor,isOnlyLoadding}){
                 element&&clearTimeout(element);
             });
         };
-    }, [])
+    }, [lineColor,isOnlyLoadding])
     //函数组件共享同一个ref实例，避免重新渲染重新创建对象
      stepInfos.current= [
         {
@@ -118,6 +119,9 @@ export default function Loadding({lineColor,isOnlyLoadding}){
             </g>,
             timeout:4200,
             dieout:7000,
+            dieoutoutFn:()=>{
+                setLoadText('');
+            },
             className:  ['step-3'],
         }
     ]

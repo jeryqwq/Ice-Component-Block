@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {withLiveEditScope} from 'storybook-addon-react-live-edit';
 import { withKnobs, number,array,object,button } from '@storybook/addon-knobs';
 import ListPosition from '../components/ListPosition/src/index';
 import usage from '../components/ListPosition/demo/usage.md';
@@ -9,9 +8,8 @@ import demo3  from '../components/ListPosition/demo/demo4.md';
 import {genSetupMarkdown} from './util';
 const stories = storiesOf('动态排名组件', module);
 stories.addDecorator(withKnobs);
-stories.addDecorator(withLiveEditScope({ React, ListPosition }));
 stories.add('基础配置', () => {
-  const data=[
+  let data=[
     {
       label: '2012年人均GDP',
       value: 50,
@@ -166,4 +164,4 @@ button("随机增加,触发动画",()=>{
     "安装":genSetupMarkdown("ListPosition"),
     "相关文档":demo3,
   },
-}).addLiveSource('在线调试', `return <ListPosition  labelStyle={{color:'red'}} formatValue={(item)=>item.value+"..."}  />`);
+})

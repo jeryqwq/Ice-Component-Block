@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {withLiveEditScope} from 'storybook-addon-react-live-edit';
 import { withKnobs, number,array,object, boolean,color } from '@storybook/addon-knobs';
 import TableShower from '../components/TableShower/src/index';
 import usage from "../components/TableShower/demo/usage.md";
@@ -10,7 +9,6 @@ import {genSetupMarkdown} from './util';
 const stories = storiesOf('表格展示组件', module);
 stories.addParameters({ component: TableShower });
 stories.addDecorator(withKnobs);
-stories.addDecorator(withLiveEditScope({ React, TableShower }));
 stories.add("基础配置",()=>{
   const columns = [
     {

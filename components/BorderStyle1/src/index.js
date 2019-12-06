@@ -96,8 +96,14 @@ export default function ShowText({title,content,height,lineColor}){
     )
 }
 ShowText.propTypes={
+    /** 边框的高度 */
     height:PropTypes.number,
-    lineColor:PropTypes.string
+    /**  主题色 */
+    lineColor:PropTypes.string,
+    /** 标题渲染函数或者字符串，函数应返回你生成的DOM，组件或字符串等 */
+    title:PropTypes.oneOfType([PropTypes.func,PropTypes.string]),
+    /** 内容区渲染函数或者字符串，函数应返回你生成的DOM，组件或字符串等 */
+    content:PropTypes.oneOfType([PropTypes.func,PropTypes.string]),
 }
 ShowText.defaultProps={
     title:"ACCESS POINT 标题很长123",

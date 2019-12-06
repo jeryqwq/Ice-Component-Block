@@ -48,7 +48,7 @@ export default function ListPosition({
   });
   return (
     <div
-      className="ListPosition"
+      className="list-position-cj"
       ref={containerWidth}
       style={{ height: itemSize * 3 * data.length }}
     >

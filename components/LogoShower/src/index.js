@@ -4,7 +4,7 @@ import './main.scss'
 export default function LogoShow({ children, lineColor, width }) {
   return (
     <div
-      className={['logo-wrap']}
+      className={['logo-wrap-asdkljg2']}
       style={{ width: width, height: width, lineHeight: `${width}px` }}
     >
       {React.cloneElement(children, {

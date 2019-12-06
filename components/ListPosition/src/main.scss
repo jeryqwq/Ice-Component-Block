@@ -1,4 +1,4 @@
-.ListPosition {
+.list-position-cj {
   position: relative;
   > .item {
     position: absolute;
@@ -12,8 +12,8 @@
     }
     > .process {
       transform-style: preserve-3d;
-      animation: identifier infinite 5s linear;
-      @keyframes identifier {
+      animation: identifier-list-position infinite 5s linear;
+      @keyframes identifier-list-position {
         from {
           transform: translateX(-20px) rotateY(-10deg) rotateX(0) ;
         }

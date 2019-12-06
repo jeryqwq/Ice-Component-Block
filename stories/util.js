@@ -5,12 +5,12 @@ export const genSetupMarkdown=(componentName)=>{
     const installName=componentName.replace(/([A-Z])/g,"-$1").toLowerCase().substr(1);
     return `
     ## 支持环境
-    * React 16.X以上
+    * React 16.X以上(支持Hooks)
     * ESmodule (webpack)
     
     ## 安装
 
-    使用 npm 或 安装
+    使用 npm 或 cnpm 安装
 
     ><span style="color:red">请确保您能连接到局域网</span>
 
