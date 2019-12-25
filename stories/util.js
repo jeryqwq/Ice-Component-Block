@@ -17,17 +17,20 @@ export const genSetupMarkdown=(componentName)=>{
     <div style="color:#314659;background:#f2f4f5;padding:10px ">  npm --registry ${config.npmHost}  install ${installName} --save</div>
 
     ##  使用
-
     <div style="color:#314659;background:#f2f4f5;padding:10px "> 
-    <p> import React ,{Component} from 'react' </p>
-    <p> import <span style="color:red">${componentName}</span> from '${installName}' </p>
+
+    <p> <span style="color:#af2af1">import</span> <span>&nbsp;React,{Component} from 'react'</span> </p>
+
+    <p> <span style="color:#af2af1">import</span> <span style="color:red"> &nbsp;${componentName}</span> <span>&nbsp;from '${installName}'</span> </p>
 
     export default class App extends Component(){
 
             render(){
                 
                 return(
+
                     <${componentName}/>
+                    
                 )
             }
     }

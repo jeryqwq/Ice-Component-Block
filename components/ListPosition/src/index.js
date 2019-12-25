@@ -1,8 +1,6 @@
 import React, { useState, useRef,useEffect, useLayoutEffect } from 'react';
 import './main.scss';
 import Proptypes from 'prop-types';
-import {  } from '@storybook/addons';
-
 function randomColor() {
   return `rgba(${parseInt(Math.random() * 255)},${parseInt( Math.random() * 255)},${parseInt(Math.random() * 255)},${Math.random()})`;
 }
@@ -171,7 +169,7 @@ ListPosition.defaultProps = {
     },
     {
       label: '2019年人均GDP',
-      value: 95,
+      value: 125,
       borderStyle: 'none',
     },
   ],

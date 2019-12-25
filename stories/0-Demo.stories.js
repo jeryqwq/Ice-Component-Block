@@ -1,11 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {withLiveEditScope} from 'storybook-addon-react-live-edit';
-import { withKnobs, number,array,object,button } from '@storybook/addon-knobs';
-import { withInfo } from '@storybook/addon-info';
-
-const stories = storiesOf('Demo组件', module);
-stories.addDecorator(withInfo); 
+import { withKnobs, number,color,boolean } from '@storybook/addon-knobs';
+import {genSetupMarkdown} from './util';
+import FirstScreenLoadding1 from '../components/FirstScreenLoadding1/src/index'
+import usage from './../components/FirstScreenLoadding1/demo/usage.md';
+const componentName="FirstScreenLoadding1";
+const stories = storiesOf('首屏加载动画', module);
 stories.addDecorator(withKnobs);
-export const withSubtitle = () => (123
-  );

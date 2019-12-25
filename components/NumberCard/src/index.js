@@ -8,6 +8,7 @@ export default function NumberCard({
   styles,
   isonlyNumber,
   numberSpacing,
+  spaceSymbol
 }) {
   const [randomNum, setRandomNum] = useState(0);
   const [isAnimationOver, setisAnimationOver] = useState(() => false);
@@ -19,7 +20,7 @@ export default function NumberCard({
     let numIdx=1;
     for (let i = stringNumber.length-1; i >=0; i--) {
       if(stringNumber[numIdx] && (numIdx)%numberSpacing===0 && i!== 0){
-        numberSlice+=(`${stringNumber[i]},`);
+        numberSlice+=(`${stringNumber[i]}${spaceSymbol}`);
       }else{
         numberSlice+=stringNumber[i];
       }
@@ -27,12 +28,12 @@ export default function NumberCard({
     };
     numberSlice=numberSlice.split('').reverse().join('');
     setNumberSlice(val=>numberSlice);
-    const animationNum=numberSlice.split(",");
+    const animationNum=numberSlice.split(spaceSymbol);
     let timeout;
     const interval = setInterval(() => {
       let str = '';
       for (let j = 0; j < animationNum.length; j++) {
-        j != 0 && (str += ',');   
+        j != 0 && (str +=spaceSymbol);   
         for (let i = 0; i < animationNum[j].length; i++) {
           str += parseInt(Math.random() * 10);
         }
@@ -47,7 +48,7 @@ export default function NumberCard({
       interval && clearInterval(interval);
       timeout && clearTimeout(interval);
     };
-  }, [animationTime, number, numberSpacing]);
+  }, [animationTime, number, numberSpacing,spaceSymbol]);
 
   if (isonlyNumber) {
     if (isAnimationOver) {
@@ -65,11 +66,18 @@ export default function NumberCard({
 }
 
 NumberCard.propTypes = {
+  /** 动画执行后显示的数据 */	
   number: Proptypes.number,
+  /** 逗号分隔的位数 */	
   numberSpacing: Proptypes.number,
+  /** 动画执行时间(ms) */
   animationTime: Proptypes.number,
+   /** 自定义JSX样式渲染 */
   styles: Proptypes.object,
+   /** 是否渲染纯数字，无任何父元素 */
   isonlyNumber: Proptypes.bool,
+  /** 指定间隔分隔的符号 */
+  spaceSymbol:Proptypes.string
 };
 
 NumberCard.defaultProps = {
@@ -77,6 +85,7 @@ NumberCard.defaultProps = {
   animationTime: 2000,
   isonlyNumber: false,
   numberSpacing:3,
+  spaceSymbol:',',
   styles: {
     color: 'blue',
     fontSize: 25,

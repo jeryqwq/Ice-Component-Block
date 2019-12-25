@@ -9,7 +9,7 @@ export default function Loadding({lineColor,isOnlyLoadding}){
     const stepInfos=useRef(null);
     const timeStracks=useRef(null);//动画延时器存储，组件销毁时移除
     let interval;
-    isDieout[0]=true;//第一次渲染时外圈为true，避免在第二次渲染才出现，有一个时间差，优化体验,
+    isDieout[0]=true;//第一次渲染时外圈为true，避免在第二次渲染才出现，有一个时间差，优化体验
     useEffect(() => {
         setIAnimatonOver(false);
         const loadArr="LOADING.....".split('');
@@ -54,6 +54,7 @@ export default function Loadding({lineColor,isOnlyLoadding}){
         };
     }, [lineColor,isOnlyLoadding])
     //函数组件共享同一个ref实例，避免重新渲染重新创建对象
+    //动画元素出现时间，消失时间，以及元素类名，和出现消失的钩子函数。
      stepInfos.current= [
         {
             stepEl:<path  d="M600 400 A 100 100 0 0 0 600 800 M600 400A 100 100 0 0 1 600 800 " stroke={lineColor} ></path>,
