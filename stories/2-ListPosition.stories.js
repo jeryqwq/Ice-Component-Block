@@ -39,7 +39,7 @@ let data=[
 stories.add('基础配置', () => {
 
 button("随机增加,触发动画",()=>{
-  data[parseInt(Math.random()*5)].value+=20;
+    data[parseInt(Math.random()*5)].value+=20;
 });
  return (<div style={{maxWidth:1200}}><ListPosition itemSize={number("圆柱两边方形的边长",20)} 
  valueStyle={object("右侧值JSX数字样式",{

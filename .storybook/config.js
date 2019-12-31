@@ -1,6 +1,5 @@
 import { configure,addParameters ,setAddon ,addDecorator} from '@storybook/react';
 import { create } from '@storybook/theming/create';
-import LiveEdit, {setOptions} from 'storybook-addon-react-live-edit';
 import { withInfo } from '@storybook/addon-info';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
@@ -17,7 +16,6 @@ addDecorator(
   })
 );
 setOptions({ theme: 'darcula', presets: ['react'] });
-setAddon(LiveEdit);
 const myThemes= create({
   base: 'light',
 
