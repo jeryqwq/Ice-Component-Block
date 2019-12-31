@@ -15,7 +15,7 @@ addDecorator(
     inline:true,
   })
 );
-setOptions({ theme: 'darcula', presets: ['react'] });
+// setOptions({ theme: 'darcula', presets: ['react'] });
 const myThemes= create({
   base: 'light',
 
