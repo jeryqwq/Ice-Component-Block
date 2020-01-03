@@ -59,7 +59,7 @@
       "title": "首屏加载组件",
       "category": "Others",
       "description": "首屏动画",
-      "homepage": "https://unpkg.com/first-screen-loadding1@1.0.0/build/index.html",
+      "homepage": "http://localhost:6006/?path=/story/首屏加载动画--默认状态",
       "categories": [
         "Others"
       ],
@@ -82,7 +82,7 @@
       "title": "动态排名",
       "category": "Chart",
       "description": "动态排名组件",
-      "homepage": "http://192.168.4.145:8080/?path=/story/首屏加载动画--默认状态",
+      "homepage": "http://localhost:6006/?path=/story/动态排名组件--基础配置",
       "categories": [
         "Chart"
       ],
