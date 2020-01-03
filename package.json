@@ -42,6 +42,7 @@
     "unpkgHost": "http://192.168.4.145:8001"
   },
   "dependencies": {
+    "@alifd/theme-10825": "^0.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }

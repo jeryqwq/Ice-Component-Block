@@ -1,9 +1,6 @@
 import React, { useState, useRef,useEffect, useLayoutEffect } from 'react';
 import './main.scss';
 import Proptypes from 'prop-types';
-function randomColor() {
-  return `rgba(${parseInt(Math.random() * 255)},${parseInt( Math.random() * 255)},${parseInt(Math.random() * 255)},${Math.random()})`;
-}
 export default function ListPosition({
   data,
   itemSize,
@@ -18,11 +15,7 @@ export default function ListPosition({
   const [total,setTotal] = useState(0);
   useEffect(()=>{
     let privateData=new Array(...data);
-    privateData.forEach(element => {
-      // 求出总值
-      !element.background && (element.background = randomColor());
-      !element.borderStyle && (element.borderStyle = `solid 1px ${randomColor()}`);
-    });
+
     privateData.forEach(element => {
       // 每一项占比和对应占比的宽度
       element._percentage = element.value / total;

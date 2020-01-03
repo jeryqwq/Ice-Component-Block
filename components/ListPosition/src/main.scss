@@ -1,3 +1,4 @@
+@import "@alifd/theme-10825/variables.scss";
 .list-position-cj {
   position: relative;
   > .item {
@@ -6,6 +7,48 @@
     top: 0px;
     left: 0px;
     width: 100%;
+    &:nth-child(1){
+      >.name{
+        color: $color-brand1-9;
+      }
+      >.process{
+        >span{
+          background:  $color-brand1-9;
+        }
+      }
+    }
+    &:nth-child(2){
+      >.name{
+        color: $color-brand1-6;
+      }
+      >.process{
+        >span{
+          background:  $color-brand1-6;
+        }
+      }
+    }
+    &:nth-child(3){
+      >.name{
+        color: $color-brand1-1;
+      }
+      >.process{
+        >span{
+          background:  $color-brand1-1;
+        }
+      }
+
+    }
+    &:nth-child(1){
+      >.name{
+        color: $color-brand1-1;
+      }
+      >.process{
+        >span{
+          background:  $color-brand1-1;
+        }
+      }
+
+    }
     >.value{
       float: right;
       margin-top: 10px;
@@ -25,6 +68,7 @@
         display: inline-block;
         position: absolute;
         margin-top: 10px;
+
       }
     }
   }
