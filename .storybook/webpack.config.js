@@ -1,5 +1,5 @@
 const path = require('path');
-const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
+// const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
 
 // import "@storybook"
 // Export a function. Accept the base config as the only param.
