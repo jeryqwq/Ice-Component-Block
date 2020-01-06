@@ -1,0 +1,246 @@
+{
+  "template": "@icedesign/ice-react-material-template",
+  "type": "react",
+  "registry": "http://192.168.4.145:8001",
+  "unpkgHost": "http://192.168.4.145:8080",
+  "name": "material-iceworks",
+  "description": "This is a ice material project and  use storybook to build doc web",
+  "author": "",
+  "blocks": [
+    {
+      "name": "TestBlock",
+      "title": "测试区块",
+      "category": "Others",
+      "description": "这是描述信息",
+      "homepage": "http://192.168.4.145:8080/blocks/TestBlock/build/index.html",
+      "categories": [
+        "Others"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "test-block",
+        "version": "0.1.0",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "http://192.168.4.145:8080/blocks/TestBlock/screenshot.png",
+      "screenshots": [
+        "http://192.168.4.145:8080/blocks/TestBlock/screenshot.png"
+      ],
+      "publishTime": "2018-08-19T04:46:13.866Z",
+      "updateTime": "2018-08-19T04:48:13.675Z"
+    }
+  ],
+  "components": [
+    {
+      "name": "BorderStyle1",
+      "title": "酷炫边框打气筒文字闪烁和打字特效",
+      "category": "Information",
+      "description": "酷炫边框打气筒文字闪烁和打字特效",
+      "homepage": "http://192.168.4.145:8080/?path=/story/边框样式--默认配置",
+      "categories": [
+        "Information"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "border-style1",
+        "version": "1.0.1",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-10-31T11:31:34.238Z",
+      "updateTime": "2020-01-03T06:20:57.140Z"
+    },
+    {
+      "name": "BorderStyle2",
+      "title": "边框闪烁变色",
+      "category": "Information",
+      "description": "大屏边框效果",
+      "homepage": "https://unpkg.com/border-style2@1.0.0/build/index.html",
+      "categories": [
+        "Information"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "border-style2",
+        "version": "1.0.0",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-01T02:52:25.814Z",
+      "updateTime": "2019-11-01T02:52:25.814Z"
+    },
+    {
+      "name": "FirstScreenLoadding1",
+      "title": "首屏加载组件",
+      "category": "Others",
+      "description": "首屏动画",
+      "homepage": "https://unpkg.com/first-screen-loadding1@1.0.0/build/index.html",
+      "categories": [
+        "Others"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "first-screen-loadding1",
+        "version": "1.0.0",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-01T05:39:31.505Z",
+      "updateTime": "2019-11-01T05:39:31.505Z"
+    },
+    {
+      "name": "ListPosition",
+      "title": "动态排名",
+      "category": "Chart",
+      "description": "动态排名组件",
+      "homepage": "https://unpkg.com/list-position@1.0.1/build/index.html",
+      "categories": [
+        "Chart"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "list-position",
+        "version": "1.0.1",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-19T05:26:06.380Z",
+      "updateTime": "2019-11-21T06:35:59.797Z"
+    },
+    {
+      "name": "LogoShower",
+      "title": "LOGO展示",
+      "category": "Others",
+      "description": "LOGO展示动画",
+      "homepage": "https://unpkg.com/logo-shower@1.0.1/build/index.html",
+      "categories": [
+        "Others"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "logo-shower",
+        "version": "1.0.1",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-15T10:21:30.506Z",
+      "updateTime": "2019-11-15T10:22:32.717Z"
+    },
+    {
+      "name": "NumberCard",
+      "title": "数字翻牌器",
+      "category": "Information",
+      "description": "数字翻牌器",
+      "homepage": "http://192.168.4.145:8080/components/NumberCard/build/index.html",
+      "categories": [
+        "Information"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "number-card",
+        "version": "1.0.1",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-11T06:58:19.461Z",
+      "updateTime": "2019-11-11T06:59:05.066Z"
+    },
+    {
+      "name": "ScienceStyle1",
+      "title": "酷炫科技风旋转，爱的魔力转圈圈。。。。",
+      "category": "Others",
+      "description": "大屏科技风格旋转动画",
+      "homepage": "https://unpkg.com/science-style1@1.0.1/build/index.html",
+      "categories": [
+        "Others"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "science-style1",
+        "version": "1.0.1",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-01T02:45:13.991Z",
+      "updateTime": "2019-11-01T02:49:50.361Z"
+    },
+    {
+      "name": "SlideText",
+      "title": "文字滚动",
+      "category": "Information",
+      "description": "文字滚动效果",
+      "homepage": "https://unpkg.com/slide-text@1.0.2/build/index.html",
+      "categories": [
+        "Information"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "slide-text",
+        "version": "1.0.2",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-14T07:18:43.917Z",
+      "updateTime": "2019-11-15T09:43:56.763Z"
+    },
+    {
+      "name": "TableShower",
+      "title": "展示大表哥",
+      "category": "Table",
+      "description": "表格展示轮播",
+      "homepage": "https://unpkg.com/table-shower@1.0.2/build/index.html",
+      "categories": [
+        "Table"
+      ],
+      "source": {
+        "type": "npm",
+        "npm": "table-shower",
+        "version": "1.0.2",
+        "registry": "http://192.168.4.145:8001"
+      },
+      "dependencies": {
+        "prop-types": "^15.5.8"
+      },
+      "screenshot": "",
+      "screenshots": "",
+      "publishTime": "2019-11-15T09:18:50.382Z",
+      "updateTime": "2019-11-15T09:20:56.094Z"
+    }
+  ],
+  "scaffolds": []
+}

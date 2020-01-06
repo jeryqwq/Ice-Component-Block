@@ -6,7 +6,7 @@
   "scripts": {
     "doc": "start-storybook -p 6006",
     "deploy": "npm run generate && npm run sync",
-    "generate": "iceworks generate",
+    "gen": "iceworks generate",
     "sync": "iceworks sync",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx ./",
@@ -39,7 +39,7 @@
     "template": "@icedesign/ice-react-material-template",
     "type": "react",
     "registry": "http://192.168.4.145:8001",
-    "unpkgHost": "http://192.168.4.145:8001"
+    "unpkgHost": "http://192.168.4.145:8080"
   },
   "dependencies": {
     "@alifd/theme-10825": "^0.1.1",

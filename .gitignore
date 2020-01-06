@@ -11,7 +11,7 @@ coverage/
 .vscode/
 .tmp/
 
-build
+# build
 blocks/**/lib/
 components/**/lib/
 screenshot.png
