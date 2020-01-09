@@ -5,7 +5,6 @@ import SvgIcon from '@/components/SvgIcon';
 export default function NavLink(props) {
   const linkProps = {};
   linkProps.className=props.menuType==='headerMenu'?styles.headerItem:styles.aslideItem;
-  console.log(props)
   if (props.newWindow) {
     linkProps.href = props.path;
     linkProps.target = '_blank';

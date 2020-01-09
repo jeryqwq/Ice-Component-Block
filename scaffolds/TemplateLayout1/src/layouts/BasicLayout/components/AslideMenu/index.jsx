@@ -14,12 +14,8 @@ function MenuIcon(icon) {
     </span>
   )
 }
-let AslideMenu = () => {
+let AslideMenu = ({isIconOnly}) => {
   let history = useHistory()
-  const [isIconOnly, setIsIconOnly] = useState(false) //是否仅显示图标菜单--功能按钮
-  AslideMenu.setIsIconOnly = ()=>{
-    setIsIconOnly(!isIconOnly);
-  } //hooks方法挂载到函数下,类似于ref调用
   const LinkTo = path => {
     path && path !== "" && history.push(path)
   }

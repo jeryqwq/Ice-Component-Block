@@ -14,6 +14,7 @@ const routerConfig = [
       { path: '/about', component: About },
       { path: '/home', component: Home },
       { component: NotFound },
+      { path: '', component: Home },
     ],
   },
 ];
