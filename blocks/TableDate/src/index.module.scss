@@ -1,0 +1,46 @@
+@import "@alifd/theme-10825/variables.scss";//默认主题，修改配色主题请修改源码路径
+
+.TableDate {
+  td[type="body"]{
+    font-size: 14px;
+    color: $color-text1-3;
+  }
+  button[type='button']{
+    font-size: 14px;
+  }
+}
+.pageWrap{
+  text-align: right;
+  margin-top: 15px;
+  position: relative;
+}
+.pageTotal{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $color-text1-2  ;
+}
+.errStatus{
+  &::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: $color-brand1-6;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+}
+.successStatus{
+  &::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: $color-success-3;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+}

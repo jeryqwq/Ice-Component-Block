@@ -3,6 +3,7 @@ import NavLink from "./components/AslideMenu/menuItem"
 import AslideMenu from "./components/AslideMenu"
 import SvgIcon from "@/components/SvgIcon"
 import { headerMenuConfig, asideMenuConfig } from "@/config/menu.js"
+import BreadCrumb from './components/BreadCrumb1'
 import styles from "./index.module.scss"
 
 function debounce(fn, wait) {
@@ -33,7 +34,7 @@ export default function BasicLayout({ children }) {
         <span className={styles.leftPart}>
           <div className={styles.logoInfo}>
             <SvgIcon width="16" height="16" iconName="logo" />
-            LOGO 公安数据治理平台
+            <span style={{color:'orange',fontWeight:700,fontSize:18}}>LOGO</span> 公安数据治理平台
           </div>
           <SvgIcon
             width="16"
@@ -63,6 +64,7 @@ export default function BasicLayout({ children }) {
         {/* Main */}
         <div className={styles.main}>
           {/* Content */}
+            <BreadCrumb />
           <div className={styles.content}>{children}</div>
         </div>
       </div>

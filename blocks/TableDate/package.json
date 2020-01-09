@@ -1,7 +1,7 @@
 {
-  "name": "bread-crumb1",
-  "version": "0.1.1",
-  "description": "专用于面包屑区块",
+  "name": "table-date",
+  "version": "0.1.0",
+  "description": "表格的基础样式(含分页和搜索)",
   "private": false,
   "files": [
     "src/",
@@ -33,8 +33,8 @@
     "react-dom": "^16.3.0"
   },
   "blockConfig": {
-    "name": "BreadCrumb1",
-    "title": "面包屑样式",
-    "category": "面包屑"
+    "name": "TableDate",
+    "title": "表格数据操作",
+    "category": "Table"
   }
 }
