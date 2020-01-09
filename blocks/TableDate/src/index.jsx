@@ -43,6 +43,9 @@ export default function TableDate({ value }) {
   const onPageChange=(args)=>{
     console.log("pageChange",args);
   }
+  const handlePageSizeChange=(size)=>{
+    console.log("handlePageSizeChange:size=",size);
+  }
   const renderAction=(value, index, record)=>{//有可能需要操作内部数据，放在内部
     return (
       <span>
@@ -75,7 +78,9 @@ export default function TableDate({ value }) {
       </Table>
       <div className={styles.pageWrap}>
           <Pagination total={2514} onChange={onPageChange} size="medium"
-           totalRender={total => <span className={styles.pageTotal}>{`共计: ${total}条`}</span>}/>
+          pageSizeSelector="dropdown" pageSizePosition="end"
+          onPageSizeChange={handlePageSizeChange} 
+          totalRender={total => <span className={styles.pageTotal}>{`共计: ${total}条`}</span>}/>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 {
   "name": "table-date",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "表格的基础样式(含分页和搜索)",
   "private": false,
   "files": [
@@ -35,6 +35,6 @@
   "blockConfig": {
     "name": "TableDate",
     "title": "表格数据操作",
-    "category": "Table"
+    "category": "表格"
   }
 }
