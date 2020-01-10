@@ -48,11 +48,11 @@ export default function TableDate({ value }) {
   }
   const renderAction=(value, index, record)=>{//有可能需要操作内部数据，放在内部
     return (
-      <span>
+      <>
             <Button type="primary" text>修改</Button> &nbsp;&nbsp;
             <Button type="primary" text>禁用</Button> &nbsp;&nbsp;
             <Button type="primary" text>洞察</Button> &nbsp;&nbsp;
-      </span>
+      </>
     )
   }
   return (
@@ -67,6 +67,7 @@ export default function TableDate({ value }) {
       onFilter={onFilter}
       onSort={onSort}
       style={{marginTop:10}}
+      hasBorder={false}
       >
           <Table.Column title="序列" dataIndex="id"/>
           <Table.Column title="洞察主题" dataIndex="theme"/>

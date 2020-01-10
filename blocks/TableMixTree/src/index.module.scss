@@ -1,0 +1,81 @@
+@import "@icedesign/theme/variables.scss";//默认主题，修改配色主题请修改源码路径
+.TableMixTree {
+  display: flex;
+  flex-direction: row;
+}
+.layoutLeft{
+  width: 260px;
+}
+.layoutRight{
+  flex: 1;
+}
+.tableWrap{
+
+}
+.toolBtn{
+  margin-bottom: 10px;
+}
+.treeItemIcon{
+  color: $color-text1-3;
+  display: none;
+  position: absolute;
+  right: 0;
+  >i{
+    margin-right: 5px;
+  }
+}
+.treeWrap{
+  position: relative;
+  &:hover{
+    span[showflag="true"]{
+      display: inline-block;
+    }
+  }
+}
+.openTable{
+  padding-left: 15px;
+  background-color: $color-fill1-3;
+}
+.openTitle{
+  font-size: 14px;
+  color: #666666;
+  line-height: 45px;
+  >span{
+    margin-right: 150px;
+  }
+}
+.pageWrap{
+  text-align: right;
+  margin-top: 15px;
+  position: relative;
+}
+.errStatus{
+  &::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: $color-brand1-6;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+}
+.successStatus{
+  &::before{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: $color-success-3;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+}
+.pageTotal{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $color-text1-2  ;
+}

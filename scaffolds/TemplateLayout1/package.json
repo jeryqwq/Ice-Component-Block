@@ -1,6 +1,6 @@
 {
   "name": "template-layout1",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "公安数据治理平台布局模板-(菜单自适应,路由，菜单，页面支持可视化配置)",
   "engines": {
     "node": ">=8.0.0"
