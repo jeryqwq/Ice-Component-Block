@@ -1,7 +1,7 @@
 {
-  "name": "table-mix-tree",
+  "name": "dialog-edit-rule",
   "version": "0.1.0",
-  "description": "左侧树型选择右侧展开表格",
+  "description": "弹出框表单校验",
   "files": [
     "src/",
     "build/",
@@ -32,8 +32,8 @@
     "react-dom": "^16.3.0"
   },
   "blockConfig": {
-    "name": "TableMixTree",
-    "title": "树型选择可展开表格",
-    "category": "表格"
+    "name": "DialogEditRule",
+    "title": "标签规则弹出框表单",
+    "category": "弹出框"
   }
 }
