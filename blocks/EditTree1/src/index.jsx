@@ -91,6 +91,7 @@ export default function() {
   //异步加载请参照文档https://fusion.design/component/basic/tree
   const handleSelect = args => {
     console.log("select", args) //选中项key值
+    setI(i+1);
   }
   const handleEditTreeItem = event => {}
   const editFinishHandle = (key, label, node) => {
@@ -163,7 +164,7 @@ export default function() {
       footer={<span><Button  type="normal" onClick={()=>{setVisible(false)}}>取消</Button><Button style={{marginLeft:10}}  type="primary" onClick={()=>{setVisible(false)}}>确定</Button></span>}
       visible={visible}
       >
-      <Tab shape="wrapped" onChange={handleOnchange} style={{width:1100}}>
+      <Tab shape="wrapped" onChange={handleOnchange} style={{width:1200}}>
         {
             tabs.map(tab => <Tab.Item title={tab.tab} key={tab.key}></Tab.Item>)
         }

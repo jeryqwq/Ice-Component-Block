@@ -1,6 +1,6 @@
 {
-  "name": "dialog-edit-rule",
-  "version": "0.1.0",
+  "name": "form-validate-dialog",
+  "version": "0.1.2",
   "description": "弹出框表单校验",
   "files": [
     "src/",
@@ -32,8 +32,8 @@
     "react-dom": "^16.3.0"
   },
   "blockConfig": {
-    "name": "DialogEditRule",
-    "title": "标签规则弹出框表单",
+    "name": "FormValidateDialog",
+    "title": "表单验证弹出框表单",
     "category": "弹出框"
   }
 }

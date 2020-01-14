@@ -71,6 +71,7 @@ export default function() {
   //异步加载请参照文档https://fusion.design/component/basic/tree
   const handleSelect = arg => {
     console.log("select", arg) //选中项key值;
+    setI(i + 1)
   }
   const editFinishHandle = (key, label, node) => {
     //节点编辑状态
@@ -160,7 +161,7 @@ export default function() {
       <Tab
         shape="capsule"
         onChange={handleOnchange}
-        style={{ width: 1100, color: "#5584FF", textAlign: "center" }}
+        style={{ width: '100vw', color: "#5584FF", textAlign: "center" }}
       >
         {tabs.map(tab => (
           <Tab.Item
