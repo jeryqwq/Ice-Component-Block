@@ -1,0 +1,57 @@
+@import "@icedesign/theme/variables.scss";//默认主题，修改配色主题请修改源码路径
+
+.ListInfos1 {
+
+}
+.flexWrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transform: translateY(-10px);
+  >.item{
+    width: calc( 33.3% - 13px);
+    box-sizing: border-box;
+    border: solid $popup-local-border-width $popup-local-border-color;
+    margin-top: 25px;
+    font-size: 16px;
+    color: #666666;
+    border-radius: 4px;
+    >.title{
+      padding:0 25px ;
+      margin-top: 25px;
+    }
+    >.btmBlock{
+      height: 32px;
+      background-color: $color-fill1-1;
+      border: solid $popup-local-border-width $popup-local-border-color;
+      border-width: $popup-local-border-width 0 0 0;
+      border-radius:  0 0 4px 4px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 25px;
+      font-size: 14px;
+      line-height: 32px;
+    }
+    >.desc{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 18px;
+      font-size: 14px;
+      padding:0 25px 14px 25px ;
+
+    }
+  }
+}
+.pageWrap{
+  text-align: right;
+  margin-top: 15px;
+  position: relative;
+}
+.pageTotal{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $color-text1-2  ;
+}
