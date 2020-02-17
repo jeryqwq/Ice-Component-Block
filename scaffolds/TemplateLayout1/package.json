@@ -54,5 +54,8 @@
     "name": "template-layout1",
     "title": "布局模板",
     "category": "Basic"
+  },
+  "ideMode": {
+    "name": "ice-react"
   }
 }
