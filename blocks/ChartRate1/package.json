@@ -1,0 +1,42 @@
+{
+  "name": "chart-rate1",
+  "version": "0.1.0",
+  "description": "占比信息饼图和排名信息",
+  "private": false,
+  "files": [
+    "src/",
+    "build/",
+    "screenshot.png"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ice",
+    "react",
+    "block"
+  ],
+  "scripts": {
+    "start": "build-scripts start",
+    "build": "build-scripts build",
+    "screenshot": "screenshot -l -s mountNode",
+    "prepublishOnly": "npm run build && npm run screenshot"
+  },
+  "dependencies": {
+    "@antv/g2": "^3.5.11",
+    "prop-types": "^15.5.8"
+  },
+  "devDependencies": {
+    "@alib/build-scripts": "^0.1.8",
+    "@ice/screenshot": "^0.1.1",
+    "build-plugin-block": "^0.1.0",
+    "build-plugin-fusion": "^0.1.0",
+    "build-plugin-ice-app": "^0.1.0",
+    "build-plugin-moment-locales": "^0.1.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "blockConfig": {
+    "name": "ChartRate1",
+    "title": "ChartRate1",
+    "category": "Chart"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "material-iceworks",
   "version": "0.1.1",
-  "description": "This is a UED material project and  use storybook to build doc.jsut happy code!!!",
+  "description": "This is a UED material project and  use storybook to build document .jsut happy code!!!",
   "author": "",
   "scripts": {
     "doc": "start-storybook -p 6006",

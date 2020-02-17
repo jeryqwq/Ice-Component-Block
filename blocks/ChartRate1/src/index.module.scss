@@ -1,0 +1,97 @@
+.ChartRate1 {
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  font-family: Microsoft Yahei;
+
+  > .lf {
+    width: 50%;
+
+    > .chart {
+      height: 350px;
+    }
+  }
+
+  > .rg {
+    width: 30%;
+  }
+}
+
+.titles {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 600;
+
+  > .cate {
+    float: right;
+    font-size: 14px;
+    color: #666666;
+
+    > .item {
+      margin-left: 12px;
+      cursor: pointer;
+      font-weight: normal;
+
+      &.cur {
+        color: #de6363;
+      }
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+
+  td {
+    height: 40px;
+    padding: 5px 10px;
+    color: #666666;
+    font-size: 14px;
+
+    &.up {
+      color: #72c381;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: #72c381 transparent transparent transparent;
+        transform: rotate(180deg);
+        vertical-align: middle;
+        margin-left: 5px;
+      }
+    }
+
+    &.down {
+      color: #de6363;
+      &::after {
+        content: "";
+        display: inline-block;
+        margin-left: 5px;
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: #de6363 transparent transparent transparent;
+      }
+    }
+
+    &.index {
+      &.cur {
+        > span {
+          background-color: #de6363;
+          color: white;
+        }
+      }
+
+      > span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: #dedede;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
