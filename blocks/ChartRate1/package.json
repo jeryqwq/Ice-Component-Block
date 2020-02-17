@@ -2,7 +2,6 @@
   "name": "chart-rate1",
   "version": "0.1.0",
   "description": "占比信息饼图和排名信息",
-  "private": false,
   "files": [
     "src/",
     "build/",
