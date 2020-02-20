@@ -1,18 +1,20 @@
+@import "@icedesign/theme/variables.scss"; //默认主题，修改配色主题请修改源码路径
+
 .ChartRate1 {
   height: 400px;
   display: flex;
   justify-content: space-around;
   font-family: Microsoft Yahei;
 
-  > .lf {
+  >.lf {
     width: 50%;
 
-    > .chart {
+    >.chart {
       height: 350px;
     }
   }
 
-  > .rg {
+  >.rg {
     width: 30%;
   }
 }
@@ -22,18 +24,18 @@
   color: #666666;
   font-weight: 600;
 
-  > .cate {
+  >.cate {
     float: right;
     font-size: 14px;
     color: #666666;
 
-    > .item {
+    >.item {
       margin-left: 12px;
       cursor: pointer;
       font-weight: normal;
 
       &.cur {
-        color: #de6363;
+        color: $color-brand1-6;
       }
     }
   }
@@ -64,26 +66,27 @@ table {
     }
 
     &.down {
-      color: #de6363;
+      color: $color-brand1-6;
+
       &::after {
         content: "";
         display: inline-block;
         margin-left: 5px;
         border-style: solid;
         border-width: 6px 6px 0 6px;
-        border-color: #de6363 transparent transparent transparent;
+        border-color: $color-brand1-6 transparent transparent transparent;
       }
     }
 
     &.index {
       &.cur {
-        > span {
-          background-color: #de6363;
+        >span {
+          background-color: $color-brand1-6;
           color: white;
         }
       }
 
-      > span {
+      >span {
         display: inline-block;
         width: 20px;
         height: 20px;

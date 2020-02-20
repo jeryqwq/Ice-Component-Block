@@ -1,0 +1,29 @@
+@import "@icedesign/theme/variables.scss"; //默认主题，修改配色主题请修改源码路径
+
+.ChartLineBar {}
+
+.chartWrap {
+  height: 350px;
+}
+
+.titles {
+  font-size: 16px;
+  color: $color-text1-3;
+  font-weight: 600;
+
+  >.cate {
+    float: right;
+    font-size: 14px;
+    color: $color-text1-3;
+
+    >.item {
+      margin-left: 12px;
+      cursor: pointer;
+      font-weight: normal;
+
+      &.cur {
+        color: $color-brand1-6
+      }
+    }
+  }
+}
